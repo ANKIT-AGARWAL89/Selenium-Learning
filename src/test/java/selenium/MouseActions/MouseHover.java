@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.SourceType;
+
 import java.time.Duration;
 
 // Actions (class) → Used to create a chain of multiple actions. (to Perform)
@@ -21,7 +22,7 @@ public class MouseHover {
         WebElement mouseHoverLocation = driver.findElement(By.xpath("//h3[@id='mouse_over']"));
         Actions act = new Actions(driver);
         Thread.sleep(2000);
-        // build -> Create an action
+        // build -> Create an action  // moveToElement method to Hover the mouse
         Action mouseHoverDone = act.moveToElement(mouseHoverLocation).build();
         // perform -> perform the action
         mouseHoverDone.perform();
