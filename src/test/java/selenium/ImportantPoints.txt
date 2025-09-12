@@ -2,3 +2,4 @@
 2. Actions (class) → Used to create a chain of multiple actions. (to Perform mouse action)
 3. Action (interface) → Represents the final built action that can be executed. (to Build)(to store created action)
 4. .build().perform() and .perform() -> will do same thing.
+5. dragAndDrop != dragAndDropBy
