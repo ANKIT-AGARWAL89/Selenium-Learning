@@ -17,9 +17,9 @@ public class Slider {
         System.out.println(minSliderCurrentLocation.getLocation()); // (846, 2021)
         System.out.println(maxSliderCurrentLocation.getLocation()); // (976, 2021)
         Actions actSlideBar = new Actions(driver);
-        // draging minslide and dropping at currentlocation+100
+        // dragging minslide and dropping at currentlocation+100
         actSlideBar.dragAndDropBy(minSliderCurrentLocation, 100, 0).perform();
-        // draging maxslide and dropping at currentlocation-20
-        actSlideBar.dragAndDropBy(maxSliderCurrentLocation,-20,0).perform();
+        // dragging maxslide and dropping at currentlocation-20
+        actSlideBar.dragAndDropBy(maxSliderCurrentLocation, -20, 0).perform();
     }
 }
