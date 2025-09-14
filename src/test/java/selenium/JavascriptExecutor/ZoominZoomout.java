@@ -13,6 +13,8 @@ public class ZoominZoomout {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        // setting zoom level 50%
         js.executeScript("document.body.style.zoom='50%'");
 
         driver.quit();
