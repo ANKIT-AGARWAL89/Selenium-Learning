@@ -3,3 +3,8 @@
 3. Action (interface) → Represents the final built action that can be executed. (to Build)(to store created action)
 4. .build().perform() and .perform() -> will do same thing.
 5. dragAndDrop != dragAndDropBy
+6.if we don't have any attribute to write xpath then we can use text() method.(inner text of the element)
+7. if no any attribute is there and no inner text is there then we can use parent to child chaining xpath.(where parent having attriubute)
+8. xpath can traverse both direction but css can only traverse from parent to child.
+9. if we click on any link from a website page and it opens in a new tab then driver focus still remains on the old tab. So we need to switch the driver focus to new tab using window handles.
+10. if within 10 seconds of wait method the element is not found then needs to convey developer as application performace is poor.
