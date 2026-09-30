@@ -18,6 +18,7 @@ public class TypesOfAlerts {
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 
         // Alert myAlert = driver.switchTo().alert();
+        // or Alert alertViaExplicitWait = myWait.until(ExpectedConditions.alertIsPresent());
         // myAlert.accept()
         // myAlert.dismiss()
         // myAlert.getText()

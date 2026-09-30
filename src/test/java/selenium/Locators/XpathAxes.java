@@ -32,7 +32,5 @@ public class XpathAxes {
         By followingLocator = By.xpath("//input[@id='username']/following::input");
         By precedingLocator = By.xpath("//input[@id='password']/preceding::input");
         By selfLocator = By.xpath("//input[@id='password']/self::input");
-
-
     }
 }

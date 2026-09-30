@@ -14,6 +14,7 @@ public class ScrollingPage {
         driver.get("https://demo.nopcommerce.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         JavascriptExecutor jS = (JavascriptExecutor) driver;
         // scrolling to a particular location
         jS.executeScript("window.scrollBy(0,1500)", "");

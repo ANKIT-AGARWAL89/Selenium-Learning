@@ -14,8 +14,10 @@ public class DragandDrop {
         driver.get("https://testautomationpractice.blogspot.com/#");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
         WebElement source = driver.findElement(By.xpath("//p[normalize-space()='Drag me to my target']"));
         WebElement destination = driver.findElement(By.xpath("//div[@id='droppable']"));
+
         Actions actDragAndDrop = new Actions(driver);
         // dragAndDrop() method used to drag and drop
         actDragAndDrop.dragAndDrop(source,destination).perform();

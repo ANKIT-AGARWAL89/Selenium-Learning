@@ -19,10 +19,11 @@ public class MouseHover {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://practice-automation.com/hover/");
         driver.manage().window().maximize();
+
         WebElement mouseHoverLocation = driver.findElement(By.xpath("//h3[@id='mouse_over']"));
         Actions act = new Actions(driver);
         Thread.sleep(2000);
-        // build -> Create an action  // moveToElement method to Hover the mouse
+        // build -> Create an action  // moveToElement() method to Hover the mouse
         Action mouseHoverDone = act.moveToElement(mouseHoverLocation).build();
         // perform -> perform the action
         mouseHoverDone.perform();

@@ -14,6 +14,7 @@ public class ClickandSendKey {
         driver.get("https://testautomationpractice.blogspot.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         JavascriptExecutor jS = (JavascriptExecutor) driver;
         WebElement elementForInputBox = driver.findElement(By.xpath("//input[@id='name']"));
         WebElement elementForClickableloc = driver.findElement(By.xpath("//input[@id='male']"));

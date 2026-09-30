@@ -12,6 +12,7 @@ public class ZoominZoomout {
         driver.get("https://demo.nopcommerce.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         // setting zoom level 50%

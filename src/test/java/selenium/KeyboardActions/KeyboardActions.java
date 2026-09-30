@@ -14,8 +14,11 @@ public class KeyboardActions {
         driver.get("https://text-compare.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         driver.findElement(By.xpath("//textarea[@id='inputText1']")).sendKeys("Ankit");
+
         Actions actKeyboardActions = new Actions(driver);
+
         // pressing the Ctrl + A
         actKeyboardActions.keyDown(Keys.CONTROL).sendKeys("A").keyUp(Keys.CONTROL).perform();
         // pressing the Ctrl + C

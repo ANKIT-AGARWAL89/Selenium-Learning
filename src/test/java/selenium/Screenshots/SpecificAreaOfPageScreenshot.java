@@ -13,7 +13,7 @@ public class SpecificAreaOfPageScreenshot {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        // Webelement.takescreenshot()
+        // Webelement.getScreenshotAs()
         WebElement logo = driver.findElement(By.xpath("//img[@alt='nopCommerce demo store']"));
         File sourceFile = logo.getScreenshotAs(OutputType.FILE);
         File targetFile = new File(System.getProperty("user.dir") + "\\Screenshots\\logo.png");
