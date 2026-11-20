@@ -1,0 +1,59 @@
+pipeline
+{
+
+    agent any
+
+    parameters
+    {
+
+        choice(
+            name: 'ENV',
+            choices: ['qa', 'staging'],
+            description: 'Test environment'
+        )
+
+        choice(
+            name: 'BROWSER',
+            choices: ['chrome', 'firefox', 'edge'],
+            description: 'Browser'
+        )
+
+        string(
+            name: 'TAGS',
+            defaultValue: '@smoke',
+            description: 'Cucumber tags'
+        )
+
+        booleanParam(
+            name: 'HEADLESS',
+            defaultValue: true,
+            description: 'Run headless'
+        )
+    }
+
+    stages
+    {
+
+        stage('Checkout')
+        {
+            steps
+            {
+                checkout scm
+            }
+        }
+
+        stage('Run Tests')
+        {
+            steps
+            {
+                bat """
+                    mvn clean test ^
+                    -Denv=${params.ENV} ^
+                    -Dbrowser=${params.BROWSER} ^
+                    -Dheadless=${params.HEADLESS} ^
+                    -Dcucumber.filter.tags="${params.TAGS}"
+                """
+            }
+        }
+    }
+}

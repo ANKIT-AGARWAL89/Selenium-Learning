@@ -13,6 +13,5 @@ public class IncognitoTab {
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://demo.nopcommerce.com/");
         driver.manage().window().maximize();
-
     }
 }

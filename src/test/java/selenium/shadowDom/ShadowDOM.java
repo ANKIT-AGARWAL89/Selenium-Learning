@@ -22,7 +22,7 @@ public class ShadowDOM {
 
         // single shadow DOM
         SearchContext shadowRoot = driver.findElement(By.id("shadow-root")).getShadowRoot();
-        WebElement actualElementInsideShadowDom = shadowRoot.findElement(By.cssSelector("#shadow-element"));;
+        WebElement actualElementInsideShadowDom = shadowRoot.findElement(By.cssSelector("#shadow-element"));
         System.out.println(actualElementInsideShadowDom.getText());
 
         // nested shadow DOM

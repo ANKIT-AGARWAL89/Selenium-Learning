@@ -41,6 +41,8 @@ public class XpathLocators {
         // chained xpath -> //relative xpath/absolute xpath
 //        driver.findElement(By.xpath("//form[@id='small-search-box-form']/input")).sendKeys("chainedxpath");
 
+//         driver.findElement(By.xpath("//*[normalize-space()='']"));
+
 //        driver.quit();
     }
 }
